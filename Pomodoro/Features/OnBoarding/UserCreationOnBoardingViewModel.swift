@@ -28,3 +28,24 @@ let meditationPOI = PointOfInterest(labelName: "meditation", labelImage: "🧘�
 let sportPOI = PointOfInterest(labelName: "sport", labelImage: "🏉", format: 1)
 
 var pois = [workPOI, studyPOI, meditationPOI, sportPOI]
+
+struct EmojiRotation: Identifiable {
+    var id = UUID()
+    var content: String
+    var rotationStart: Double // Commence à 0.0 et augmente de 30.0 à chaque item
+}
+
+var emojies: [EmojiRotation] = [
+    EmojiRotation(content: "📚", rotationStart: 0.0),
+    EmojiRotation(content: "🧘‍♂️", rotationStart: 30.0),
+    EmojiRotation(content: "🏢", rotationStart: 60.0),
+    EmojiRotation(content: "💻", rotationStart: 90.0),
+    EmojiRotation(content: "🏉", rotationStart: 120.0),
+    EmojiRotation(content: "✏️", rotationStart: 150.0),
+    EmojiRotation(content: "💼", rotationStart: 180.0),
+    EmojiRotation(content: "✍️", rotationStart: 210.0),
+    EmojiRotation(content: "💵", rotationStart: 240.0),
+    EmojiRotation(content: "🖼️", rotationStart: 270.0),
+    EmojiRotation(content: "👨‍🍳", rotationStart: 300.0),
+    EmojiRotation(content: "🏠", rotationStart: 330.0)
+]

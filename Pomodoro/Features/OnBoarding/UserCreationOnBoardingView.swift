@@ -48,16 +48,18 @@ struct StepZeroView: View {
 
 struct EmojiesAnimatedCircle: View {
     @State var angleProgress: Double = 0.0
-    @State var emojieList: [String] = ["📚", "🧘‍♂️", "🏢", "💻", "🏉", "✏️", "💼", "✍️", "💵", "🖼️", "👨‍🍳", "🏠",]
+    @State var emojieList: [EmojiRotation] = emojies
 
     let frameSize: Double = 250.0
     var body: some View {
         ZStack {
             ForEach(emojieList.indices, id: \.self) { index in
                 ZStack {
-                    Text(emojieList[index])
+                    Text(emojieList[index].content)
                         .rotationEffect(.init(degrees: -angleProgress + Double(index * 30)))
                 }
+                .frame(width: frameSize, height: frameSize, alignment: .leading)
+                .rotationEffect(.init(degrees: -emojieList[index].rotationStart))
             }
         }
         .frame(width: frameSize, height: frameSize, alignment: .leading)
@@ -65,6 +67,11 @@ struct EmojiesAnimatedCircle: View {
         .animation(.linear(duration: 13.0).repeatForever(autoreverses: false), value: angleProgress)
         .onAppear {
             angleProgress += 360
+        }
+        .onChange(of: angleProgress) {
+            for index in emojieList.indices {
+                emojieList[index].rotationStart += angleProgress
+            }
         }
     }
 }
