@@ -1,0 +1,80 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Avant de commencer, nous aimerions en savoir un peu plus sur toi afin de pouvoir te donner une expérience agréable. 🙌" : {
+
+    },
+    "Bienvenue dans ton nouvel assistant de concentration." : {
+
+    },
+    "createMyProfile" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create my profile"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créer mon profil"
+          }
+        }
+      }
+    },
+    "helloEx" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello !"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salut !"
+          }
+        }
+      }
+    },
+    "letsStartInt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's start ?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On commence ?"
+          }
+        }
+      }
+    },
+    "Rassures-toi, c'est très rapide et sans engagement" : {
+
+    },
+    "stepX" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Étape %@"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
