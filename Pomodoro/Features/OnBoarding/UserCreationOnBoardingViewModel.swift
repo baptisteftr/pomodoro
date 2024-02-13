@@ -14,6 +14,8 @@ class UserCreationOnBoardingViewModel: Observable {
     var birthDate: Date = Calendar.current.date(from: DateComponents(year: 2000, month: 1, day: 1)) ?? Date()
     var pointsOfInterest: [PointOfInterest] = []
     var onBoardingState: Int = 0
+    var isSimpleLayout: Bool = true
+    var isComplexLayout: Bool = false
 }
 
 struct PointOfInterest: Identifiable {

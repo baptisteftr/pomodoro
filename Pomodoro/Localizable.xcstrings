@@ -7,10 +7,13 @@
     "(Rassures-toi, c'est très rapide et sans engagement)" : {
 
     },
-    "auihfiua" : {
+    "Aspect de l'application" : {
 
     },
     "Bienvenue dans ton nouvel assistant de concentration 🙌" : {
+
+    },
+    "birthdate" : {
 
     },
     "birthDate" : {
@@ -22,6 +25,9 @@
           }
         }
       }
+    },
+    "complexLayout" : {
+
     },
     "cook" : {
       "localizations" : {
@@ -48,6 +54,9 @@
           }
         }
       }
+    },
+    "display" : {
+
     },
     "draw" : {
       "localizations" : {
@@ -86,7 +95,19 @@
         }
       }
     },
+    "Il existe plusieurs layout. Vous pouvez en changer à tout moment dans les paramètres de votre application." : {
+
+    },
+    "informations" : {
+
+    },
     "INFORMATIONS" : {
+
+    },
+    "La date de naissance: %@" : {
+
+    },
+    "layout" : {
 
     },
     "letsStartInt" : {
@@ -118,6 +139,9 @@
     "Nous aimerions en savoir un peu plus sur toi afin de pouvoir te fournir une expérience agréable" : {
 
     },
+    "noUserFound" : {
+
+    },
     "paint" : {
       "localizations" : {
         "fr" : {
@@ -128,6 +152,15 @@
         }
       }
     },
+    "Paramètres" : {
+
+    },
+    "Pomodoro" : {
+
+    },
+    "Projets" : {
+
+    },
     "read" : {
       "localizations" : {
         "fr" : {
@@ -137,6 +170,15 @@
           }
         }
       }
+    },
+    "Salut %@" : {
+
+    },
+    "Simple layout" : {
+
+    },
+    "simpleLayout" : {
+
     },
     "sport" : {
       "localizations" : {
@@ -165,7 +207,13 @@
         }
       }
     },
-    "Ton utilisation de l'app" : {
+    "Tes informations restent sécurisées en local. Aucun partage extérieur." : {
+
+    },
+    "Timers" : {
+
+    },
+    "username" : {
 
     },
     "userName" : {
@@ -177,9 +225,6 @@
           }
         }
       }
-    },
-    "Vos informations restent sécurisées en local. Aucun partage extérieur." : {
-
     },
     "welcomeEx" : {
       "localizations" : {

@@ -7,9 +7,10 @@
 
 import SwiftUI
 import Observation
+import SwiftData
 
 struct UserCreationOnBoardingView: View {
-    @State var onBoardingStep: Int = 2
+    @State var onBoardingStep: Int = 0
     @State var userCreationViewModel: UserCreationOnBoardingViewModel = UserCreationOnBoardingViewModel()
 
     var body: some View {
@@ -66,9 +67,12 @@ struct EmojiesAnimatedCircle: View {
 }
 
 struct OnBoardingBottomBar: View {
-    let size: Double = 25
+    @Environment(\.modelContext) var modelContext
+    @Query var users: [User]
     @Bindable var userCreationViewModel: UserCreationOnBoardingViewModel
     @Binding var stepNb: Int
+    let size: Double = 25
+    let opacity: Double = 1.0
     var body: some View {
         HStack {
             Button {
@@ -96,7 +100,7 @@ struct OnBoardingBottomBar: View {
                             .frame(width: size * 3, height: size * 3)
                     }
                 }
-                .background(RoundedRectangle(cornerRadius: 25.0).foregroundStyle(Color.purple.gradient.opacity(0.6)))
+                .background(RoundedRectangle(cornerRadius: 25.0).foregroundStyle(Color.accentColor.gradient.opacity(opacity)))
             }
             if stepNb != 0 {
                 if stepNb < 3 {
@@ -108,6 +112,11 @@ struct OnBoardingBottomBar: View {
                 Button {
                     withAnimation {
                         stepNb += 1
+                        if stepNb > 3 {
+                            withAnimation {
+                                modelContext.insert(User(userName: userCreationViewModel.userName, birthDate: userCreationViewModel.birthDate, selectedLayout: userCreationViewModel.isSimpleLayout ? 0 : 1))
+                            }
+                        }
                     }
                 } label: {
                     HStack {
@@ -126,7 +135,7 @@ struct OnBoardingBottomBar: View {
                                 .frame(width: size * 3, height: size * 3)
                         }
                     }
-                    .background(RoundedRectangle(cornerRadius: 25.0).foregroundStyle(stepNb == 1 && userCreationViewModel.userName.isEmpty == true ? Color.accentColor.gradient.opacity(1.0) : Color.purple.gradient.opacity(0.6)))
+                    .background(RoundedRectangle(cornerRadius: 25.0).foregroundStyle(stepNb == 1 && userCreationViewModel.userName.isEmpty == true ? Color.accentColor.gradient.opacity(1.0) : Color.accentColor.gradient.opacity(opacity)))
                 }
                 .disabled(stepNb == 1 && userCreationViewModel.userName.isEmpty == true ? true : false)
             }
@@ -223,9 +232,6 @@ struct StepTwoView: View {
     let frameSize: Double = 150.0
     let corner: Double = 25.0
     let circleSize: Double = 25.0
-    
-    @State var isSimpleLayout: Bool = false
-    @State var isComplexLayout: Bool = false
 
     var body: some View {
         VStack {
@@ -240,7 +246,7 @@ struct StepTwoView: View {
                         .foregroundColor(.white)
                         .frame(width: circleSize)
                         .overlay {
-                            if isSimpleLayout {
+                            if userCreationViewModel.isSimpleLayout {
                                 Circle()
                                     .frame(width: circleSize * 0.7)
                                     .foregroundStyle(.accent)
@@ -256,8 +262,8 @@ struct StepTwoView: View {
             }
             .onTapGesture {
                 withAnimation {
-                    isComplexLayout = false
-                    isSimpleLayout.toggle()
+                    userCreationViewModel.isComplexLayout = false
+                    userCreationViewModel.isSimpleLayout.toggle()
                 }
             }
             .padding()
@@ -271,7 +277,7 @@ struct StepTwoView: View {
                         .foregroundColor(.white)
                         .frame(width: circleSize)
                         .overlay {
-                            if isComplexLayout {
+                            if userCreationViewModel.isComplexLayout {
                                 Circle()
                                     .frame(width: circleSize * 0.7)
                                     .foregroundStyle(.accent)
@@ -287,15 +293,15 @@ struct StepTwoView: View {
             }
             .onTapGesture {
                 withAnimation {
-                    isSimpleLayout = false
-                    isComplexLayout.toggle()
+                    userCreationViewModel.isSimpleLayout = false
+                    userCreationViewModel.isComplexLayout.toggle()
                 }
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: 150, alignment: .leading)
             .background(Material.regular, in: RoundedRectangle(cornerRadius: corner))
             Spacer()
-            Text("Il existe plusieurs layout. Tu peux en changer à tout moment dans les paramètres de votre application.")
+            Text("Il existe plusieurs layout. Vous pouvez en changer à tout moment dans les paramètres de votre application.")
                 .font(.footnote)
                 .foregroundStyle(Color.secondary)
                 .padding(.bottom, 30)
