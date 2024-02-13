@@ -1,11 +1,37 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Avant de commencer, nous aimerions en savoir un peu plus sur toi afin de pouvoir te donner une expérience agréable. 🙌" : {
+    "(NSLocalizedString(\"userName\", comment: \"\"))*" : {
 
     },
-    "Bienvenue dans ton nouvel assistant de concentration." : {
+    "(Rassures-toi, c'est très rapide et sans engagement)" : {
 
+    },
+    "auihfiua" : {
+
+    },
+    "Bienvenue dans ton nouvel assistant de concentration 🙌" : {
+
+    },
+    "birthDate" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date de naissance"
+          }
+        }
+      }
+    },
+    "cook" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuisine"
+          }
+        }
+      }
     },
     "createMyProfile" : {
       "localizations" : {
@@ -23,7 +49,18 @@
         }
       }
     },
+    "draw" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dessin"
+          }
+        }
+      }
+    },
     "helloEx" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -38,6 +75,19 @@
           }
         }
       }
+    },
+    "homework" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maison"
+          }
+        }
+      }
+    },
+    "INFORMATIONS" : {
+
     },
     "letsStartInt" : {
       "localizations" : {
@@ -55,8 +105,48 @@
         }
       }
     },
-    "Rassures-toi, c'est très rapide et sans engagement" : {
+    "meditate" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méditation"
+          }
+        }
+      }
+    },
+    "Nous aimerions en savoir un peu plus sur toi afin de pouvoir te fournir une expérience agréable" : {
 
+    },
+    "paint" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peinture"
+          }
+        }
+      }
+    },
+    "read" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lecture"
+          }
+        }
+      }
+    },
+    "sport" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sport"
+          }
+        }
+      }
     },
     "stepX" : {
       "extractionState" : "manual",
@@ -71,6 +161,69 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Étape %@"
+          }
+        }
+      }
+    },
+    "Ton utilisation de l'app" : {
+
+    },
+    "userName" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom d'utilisateur"
+          }
+        }
+      }
+    },
+    "Vos informations restent sécurisées en local. Aucun partage extérieur." : {
+
+    },
+    "welcomeEx" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome !"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenue !"
+          }
+        }
+      }
+    },
+    "whoAreYouInt" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qui es-tu ?"
+          }
+        }
+      }
+    },
+    "work" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Travaille"
+          }
+        }
+      }
+    },
+    "write" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écriture"
           }
         }
       }

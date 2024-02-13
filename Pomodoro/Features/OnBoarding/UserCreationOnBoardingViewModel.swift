@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import Observation
 
+@Observable
 class UserCreationOnBoardingViewModel: Observable {
-    var firstName: String = ""
-    var lastName: String = ""
-    var birthDate: String = ""
+    var userName: String = "Baptiste"
+    var birthDate: Date = Calendar.current.date(from: DateComponents(year: 2000, month: 1, day: 1)) ?? Date()
     var pointsOfInterest: [PointOfInterest] = []
     var onBoardingState: Int = 0
 }
@@ -29,23 +30,24 @@ let sportPOI = PointOfInterest(labelName: "sport", labelImage: "🏉", format: 1
 
 var pois = [workPOI, studyPOI, meditationPOI, sportPOI]
 
-struct EmojiRotation: Identifiable {
+struct EmojiRotation: Identifiable, Equatable {
     var id = UUID()
     var content: String
     var rotationStart: Double // Commence à 0.0 et augmente de 30.0 à chaque item
+    var description: String?
 }
 
 var emojies: [EmojiRotation] = [
-    EmojiRotation(content: "📚", rotationStart: 0.0),
-    EmojiRotation(content: "🧘‍♂️", rotationStart: 30.0),
+    EmojiRotation(content: "📚", rotationStart: 0.0, description: NSLocalizedString("read", comment: "")),
+    EmojiRotation(content: "🧘‍♂️", rotationStart: 30.0, description: NSLocalizedString("meditate", comment: "")),
     EmojiRotation(content: "🏢", rotationStart: 60.0),
-    EmojiRotation(content: "💻", rotationStart: 90.0),
-    EmojiRotation(content: "🏉", rotationStart: 120.0),
-    EmojiRotation(content: "✏️", rotationStart: 150.0),
+    EmojiRotation(content: "💻", rotationStart: 90.0, description: NSLocalizedString("work", comment: "")),
+    EmojiRotation(content: "🏉", rotationStart: 120.0, description: NSLocalizedString("sport", comment: "")),
+    EmojiRotation(content: "✏️", rotationStart: 150.0, description: NSLocalizedString("draw", comment: "")),
     EmojiRotation(content: "💼", rotationStart: 180.0),
-    EmojiRotation(content: "✍️", rotationStart: 210.0),
+    EmojiRotation(content: "✍️", rotationStart: 210.0, description: NSLocalizedString("write", comment: "")),
     EmojiRotation(content: "💵", rotationStart: 240.0),
-    EmojiRotation(content: "🖼️", rotationStart: 270.0),
-    EmojiRotation(content: "👨‍🍳", rotationStart: 300.0),
-    EmojiRotation(content: "🏠", rotationStart: 330.0)
+    EmojiRotation(content: "🖼️", rotationStart: 270.0, description: NSLocalizedString("paint", comment: "")),
+    EmojiRotation(content: "👨‍🍳", rotationStart: 300.0, description: NSLocalizedString("cook", comment: "")),
+    EmojiRotation(content: "🏠", rotationStart: 330.0, description: NSLocalizedString("homework", comment: ""))
 ]
