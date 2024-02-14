@@ -26,6 +26,9 @@
         }
       }
     },
+    "Complex layout" : {
+
+    },
     "complexLayout" : {
 
     },
@@ -54,6 +57,9 @@
           }
         }
       }
+    },
+    "deleteMyData" : {
+
     },
     "display" : {
 
@@ -102,9 +108,6 @@
 
     },
     "INFORMATIONS" : {
-
-    },
-    "La date de naissance: %@" : {
 
     },
     "layout" : {
@@ -171,7 +174,7 @@
         }
       }
     },
-    "Salut %@" : {
+    "Salut %@ 🎉" : {
 
     },
     "Simple layout" : {

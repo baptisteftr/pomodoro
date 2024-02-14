@@ -21,17 +21,19 @@ struct SettingsView: View {
                         ScrollViewSectionTitle(title: NSLocalizedString("informations", comment: ""))
                         VStack {
                             HStack {
-                                Image(systemName: "person")
+                                SettingsListRowIcon(iconName: "person")
                                 Text("username")
                                 Spacer()
                                 Text(users[0].userName)
+                                    .foregroundStyle(Color.secondary)
                             }
                             Divider()
                             HStack {
-                                Image(systemName: "birthday.cake")
+                                SettingsListRowIcon(iconName: "birthday.cake")
                                 Text("birthdate")
                                 Spacer()
                                 Text(users[0].birthDate.formatted(.dateTime.day().month(.abbreviated).year()))
+                                    .foregroundStyle(Color.secondary)
                             }
                         }
                         .padding()
@@ -50,7 +52,6 @@ struct SettingsView: View {
                                         }
                                     } label: {
                                         HStack {
-                                            Image(systemName: "square.fill.text.grid.1x2")
                                             Text(layout.displayName)
                                             if layout.rawValue == selectedLayout.rawValue {
                                                 Spacer()
@@ -61,6 +62,7 @@ struct SettingsView: View {
                                 }
                             } label: {
                                 HStack {
+                                    SettingsListRowIcon(iconName: "square.fill.text.grid.1x2")
                                     Text("layout")
                                         .foregroundStyle(Color.primary)
                                     Spacer()
@@ -73,10 +75,22 @@ struct SettingsView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: corner))
                         .padding(.horizontal)
-                        Text("La date de naissance: \(users[0].birthDate.formatted())")
+                        Button {
+                            modelContext.delete(users[0])
+                        } label: {
+                            Text("deleteMyData")
+                                .foregroundStyle(.white)
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 25.0))
+                        }
+                        .padding(.horizontal)
+                        .padding(.top, 30)
                     }
                 }
-                .navigationTitle("Salut \(users[0].userName)")
+                .padding(.top)
+                .navigationTitle("Salut \(users[0].userName) 🎉")
                 .onAppear {
                     selectedLayout = NavigationLayout(rawValue: users[0].selectedLayout) ?? .simple
                 }
@@ -107,4 +121,18 @@ struct ScrollViewSectionTitle: View {
 
 #Preview {
     ScrollViewSectionTitle(title: "sectionTitle")
+}
+
+struct SettingsListRowIcon: View {
+    @State var iconName: String
+    @State var color: Color?
+    var body: some View {
+        Image(systemName: iconName)
+            .frame(width: 15)
+            .foregroundStyle(color != nil ? color! : Color.primary)
+    }
+}
+
+#Preview {
+    SettingsListRowIcon(iconName: "person")
 }

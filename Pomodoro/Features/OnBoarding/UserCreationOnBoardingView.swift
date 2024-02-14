@@ -287,7 +287,7 @@ struct StepTwoView: View {
                         RoundedRectangle(cornerRadius: corner)
                             .padding(.leading, 10)
                             .opacity(0.5)
-                        Text("Simple layout")
+                        Text("Complex layout")
                     }
                 }
             }
