@@ -15,6 +15,8 @@
 		314931A32B6FD7F100223A37 /* UserCreationOnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314931A22B6FD7F100223A37 /* UserCreationOnBoardingViewModel.swift */; };
 		314931A62B6FDB2F00223A37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314931A52B6FDB2F00223A37 /* Extensions.swift */; };
 		314931AC2B6FDE5900223A37 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 314931AB2B6FDE5900223A37 /* Localizable.xcstrings */; };
+		31E19F3B2B7E2BAB00B6968E /* PomodoroHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E19F3A2B7E2BAB00B6968E /* PomodoroHomeView.swift */; };
+		31E19F3D2B7E2C1A00B6968E /* PomodoroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E19F3C2B7E2C1A00B6968E /* PomodoroViewModel.swift */; };
 		31F0A3BB2B6FD6F00074F4D9 /* PomodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0A3BA2B6FD6F00074F4D9 /* PomodoroApp.swift */; };
 		31F0A3BD2B6FD6F00074F4D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0A3BC2B6FD6F00074F4D9 /* ContentView.swift */; };
 		31F0A3BF2B6FD6F10074F4D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F0A3BE2B6FD6F10074F4D9 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		314931A22B6FD7F100223A37 /* UserCreationOnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationOnBoardingViewModel.swift; sourceTree = "<group>"; };
 		314931A52B6FDB2F00223A37 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		314931AB2B6FDE5900223A37 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		31E19F3A2B7E2BAB00B6968E /* PomodoroHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroHomeView.swift; sourceTree = "<group>"; };
+		31E19F3C2B7E2C1A00B6968E /* PomodoroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewModel.swift; sourceTree = "<group>"; };
 		31F0A3B72B6FD6F00074F4D9 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F0A3BA2B6FD6F00074F4D9 /* PomodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroApp.swift; sourceTree = "<group>"; };
 		31F0A3BC2B6FD6F00074F4D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 		3149319E2B6FD73C00223A37 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				31E19F392B7E2B8800B6968E /* Pomodoro */,
 				31212A012B7C124C00115008 /* Settings */,
 				3149319F2B6FD74300223A37 /* OnBoarding */,
 				312129FD2B7C0DE700115008 /* Navigation.swift */,
@@ -91,6 +96,15 @@
 				314931A52B6FDB2F00223A37 /* Extensions.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		31E19F392B7E2B8800B6968E /* Pomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				31E19F3A2B7E2BAB00B6968E /* PomodoroHomeView.swift */,
+				31E19F3C2B7E2C1A00B6968E /* PomodoroViewModel.swift */,
+			);
+			path = Pomodoro;
 			sourceTree = "<group>";
 		};
 		31F0A3AE2B6FD6F00074F4D9 = {
@@ -209,9 +223,11 @@
 				312129FC2B7BFFC500115008 /* UserDataModel.swift in Sources */,
 				314931A62B6FDB2F00223A37 /* Extensions.swift in Sources */,
 				312129FE2B7C0DE700115008 /* Navigation.swift in Sources */,
+				31E19F3D2B7E2C1A00B6968E /* PomodoroViewModel.swift in Sources */,
 				31212A032B7C125A00115008 /* SettingsView.swift in Sources */,
 				31212A002B7C105E00115008 /* NavigationRules.swift in Sources */,
 				314931A12B6FD75800223A37 /* UserCreationOnBoardingView.swift in Sources */,
+				31E19F3B2B7E2BAB00B6968E /* PomodoroHomeView.swift in Sources */,
 				31F0A3BD2B6FD6F00074F4D9 /* ContentView.swift in Sources */,
 				31F0A3BB2B6FD6F00074F4D9 /* PomodoroApp.swift in Sources */,
 				314931A32B6FD7F100223A37 /* UserCreationOnBoardingViewModel.swift in Sources */,

@@ -33,12 +33,12 @@ enum NavigationLayout: Int, CaseIterable {
 }
 
 var simpleLayout: [TabBarObject] = [
-    TabBarObject(title: "Pomodoro", image: "timer", rootView: AnyView(Text("Pomodoro"))),
+    TabBarObject(title: "Pomodoro", image: "timer", rootView: AnyView(PomodoroHomeView())),
     TabBarObject(title: "Paramètres", image: "gear", rootView: AnyView(SettingsView()))
 ]
 
 var complexLayout: [TabBarObject] = [
-    TabBarObject(title: "Pomodoro", image: "timer", rootView: AnyView(Text("Pomodoro"))),
+    TabBarObject(title: "Pomodoro", image: "timer", rootView: AnyView(PomodoroHomeView())),
     TabBarObject(title: "Projets", image: "folder", rootView: AnyView(Text("Projets"))),
     TabBarObject(title: "Timers", image: "alarm", rootView: AnyView(Text("Timers"))),
     TabBarObject(title: "Paramètres", image: "gear", rootView: AnyView(SettingsView()))
